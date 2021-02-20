@@ -1,0 +1,91 @@
+.App{
+  position: relative;
+  width: 80%;
+  height: auto;
+  min-height: 100vh;
+  margin: 0 auto;
+  
+  display: grid;
+  grid-template-columns: 0.25fr 0.5fr 0.25fr;
+}
+
+.App .login{
+  position: relative;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App .login form{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.App .leftPanel{
+  position: relative;
+  border-left: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.App .leftPanel header{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #000;
+}
+
+.App .leftPanel header a{
+  position: relative;
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App .leftPanel header a svg{
+  position: relative;
+  width: 30px;
+  fill: var(--tw-blue);
+}
+
+.App .centerPanel{
+  position: relative;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+.App .centerPanel header{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.App .centerPanel header a{
+  position: relative;
+  text-decoration: none;
+  color:#000;
+  width: 100%;
+}
+
+.App .centerPanel header h3{
+  position: relative;
+  margin-left: 15px;
+}
+
+.App .rightPanel{
+  position: relative;
+  border-right: 1px solid #000;
+}
