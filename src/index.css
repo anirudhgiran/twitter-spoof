@@ -3,6 +3,11 @@
 :root{
   --font:'Roboto', sans-serif;
   --tw-blue: #1DA1F2;
+  --tw-black: #14171A;
+  --tw-dark-gray: #657786;
+  --tw-light-gray: #AAB8C2;
+  --tw-extra-light-gray: #E1E8ED;
+  --tw-extra-extra-light-gray: #F5F8FA;
 }
 
 *{

@@ -3,7 +3,7 @@ import React from 'react';
 //React Router DOM Imports
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-const Header = ({ headerText }) => {
+const Header = ({headerText}) => {
     return (
         <header>
             <Router>

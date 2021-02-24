@@ -1,0 +1,169 @@
+.centerPanel {
+  position: relative;
+  border-right: 1px solid var(--tw-extra-light-gray);
+  border-left: 1px solid var(--tw-extra-light-gray);
+  overflow-y: scroll;
+}
+
+.centerPanel::-webkit-scrollbar{
+  width: 0px;
+}
+
+.centerPanel header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  height: 50px;
+  border-bottom: 1px solid var(--tw-extra-light-gray);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+}
+
+.centerPanel header a {
+  position: relative;
+  text-decoration: none;
+  color: var(--tw-black);
+  width: 100%;
+}
+
+.centerPanel header h3 {
+  position: relative;
+  margin-left: 15px;
+}
+
+.centerPanel .tweetBox{
+  position: relative;
+  height: auto;
+  border-bottom: 8px solid var(--tw-extra-light-gray);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.centerPanel .tweetBox img{
+  position: relative;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.centerPanel .tweetBox .tweetInput{
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.centerPanel .tweetBox .tweetInput textarea{
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding-top: 10px;
+  font-family: var(--font);
+  resize: none;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--tw-extra-light-gray);
+  margin-bottom: 10px;
+}
+
+.centerPanel .tweetBox .tweetInput .tweetBtn{
+  position: relative;
+  background: var(--tw-blue);
+  height: 40px;
+  border-radius: 30px;
+  width: 80px;
+  outline: none;
+  border: none;
+  font-family: var(--font);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.centerPanel .tweetBox .tweetInput .tweetBtn:hover{
+  background: rgba(26, 141, 212, 1);
+}
+
+.centerPanel .feed{
+  position: relative;
+  width: 100%;
+}
+
+.centerPanel .feed .tweet{
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid var(--tw-extra-light-gray);
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+}
+
+.centerPanel .feed .tweet img{
+  position: relative;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.centerPanel .feed .tweet .tweetContent{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  height: auto;
+}
+
+.centerPanel .feed .tweet .tweetContent .username{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;  
+  margin-bottom: 5px;
+}
+
+.centerPanel .feed .tweet .tweetContent .username svg{
+  position: relative;
+  width: 20px;
+  margin: 0 5px;
+}
+
+.centerPanel .feed .tweet .tweetContent .username p{
+  position: relative;
+  color: var(--tw-dark-gray);
+}
+
+.centerPanel .feed .tweet .tweetContent .content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.centerPanel .feed .tweet .tweetContent .content p{
+  position: relative;
+  width: 100%;
+  text-align: justify;
+  margin-bottom: 10px
+}
+
+.centerPanel .feed .tweet .tweetContent .content img{
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+}

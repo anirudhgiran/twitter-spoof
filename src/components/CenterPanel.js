@@ -1,23 +1,42 @@
 import React from "react";
 
+//Styles imports
+import "../styles/centerPanelStyles/centerPanelStyle.css";
+
 //Center Panel Component Imports
 import Header from "./centerPanelComponents/Header";
+import TweetBox from "./centerPanelComponents/TweetBox";
+import Tweet from "./centerPanelComponents/Tweet";
+
+import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 //React Router DOM Imports
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const CenterPanel = () => {
+const CenterPanel = ({ auth, firestore }) => {
+
+  const tweetsRef = firestore.collection('tweets');
+  const query = tweetsRef.orderBy("createdAt", "desc");
+
+  const [tweets] = useCollectionData( query, {idField: "id"});
+
   return (
     <div className="centerPanel">
-      <Router>
-        <Switch>
-          <Route
-            path="/home"
-            exact
-            render={(props) => <Header {...props} headerText="Home" />}
+      <Header headerText="Home" />
+      <TweetBox auth={auth} firestore={firestore}/>
+
+      <div className="feed">
+        {tweets && tweets.map((data)=>
+          <Tweet
+            key={data.id}
+            name={data.name}
+            username={data.username}
+            verified={data.verified}
+            tweetText={data.tweetText}
+            imageUrl={data.imageUrl}
+            avatarUrl={data.photoURL}
           />
-        </Switch>
-      </Router>
+        )}
+      </div>
     </div>
   );
 };

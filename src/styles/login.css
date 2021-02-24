@@ -1,0 +1,69 @@
+.login {
+  position: relative;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .card {
+  position: relative;
+  min-width: 250px;
+  height: auto;
+  width: auto;
+  min-height: 350px;
+  background: var(--tw-extra-light-gray);
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.login .card h3 {
+  position: relative;
+  font-weight: normal;
+  color: var(--tw-black);
+  text-transform: uppercase;
+}
+
+.login .card h1 {
+  position: relative;
+  text-transform: uppercase;
+  color: var(--tw-blue);
+  border-bottom: 1px solid var(--tw-dark-gray);
+}
+
+.login .card .signInButton {
+  position: relative;
+  width: 90%;
+  height: 40px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--tw-extra-extra-light-gray);
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.login .card .signInButton:hover {
+  background: var(--tw-dark-gray);
+}
+
+.login .card .signInButton:hover p {
+  color: var(--tw-extra-light-gray);
+}
+
+.login .card .signInButton svg {
+  position: relative;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.login .card .signInButton p {
+  color: var(--tw-black);
+}
