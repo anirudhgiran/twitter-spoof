@@ -1,12 +1,18 @@
 import React from "react";
 
+import DeleteTweetBtn from './DeleteTweetBtn';
+
 const Tweet = ({
+  auth,
   name,
   username,
   verified,
   tweetText,
   imageUrl,
   avatarUrl,
+  uid,
+  docId,
+  tweetsRef
 }) => {
   return (
     <div className="tweet">
@@ -25,6 +31,7 @@ const Tweet = ({
             </svg>
           )}
           <p>@{username}</p>
+          {auth.currentUser.uid === uid ? <DeleteTweetBtn tweetsRef={tweetsRef} docId={docId}/> : ''}
         </div>
         <div className="content">
           <p>{tweetText}</p>

@@ -147,6 +147,32 @@
   color: var(--tw-dark-gray);
 }
 
+.centerPanel .feed .tweet .tweetContent .username .deleteBtn{
+  position: relative;
+  margin-left:auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.centerPanel .feed .tweet .tweetContent .username .deleteBtn:hover{
+  background: var(--tw-extra-light-gray);
+}
+
+.centerPanel .feed .tweet .tweetContent .username .deleteBtn .MuiSvgIcon-root{
+  position: relative;
+  transition: fill 0.3s ease-in-out;
+}
+
+.centerPanel .feed .tweet .tweetContent .username .deleteBtn:hover .MuiSvgIcon-root{
+  fill: red;
+}
+
 .centerPanel .feed .tweet .tweetContent .content{
   position: relative;
   display: flex;

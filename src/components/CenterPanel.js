@@ -27,6 +27,7 @@ const CenterPanel = ({ auth, firestore }) => {
       <div className="feed">
         {tweets && tweets.map((data)=>
           <Tweet
+            auth={auth}
             key={data.id}
             name={data.name}
             username={data.username}
@@ -34,6 +35,9 @@ const CenterPanel = ({ auth, firestore }) => {
             tweetText={data.tweetText}
             imageUrl={data.imageUrl}
             avatarUrl={data.photoURL}
+            uid={data.uid}
+            tweetsRef={tweetsRef}
+            docId={data.id}
           />
         )}
       </div>
