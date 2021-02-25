@@ -32,7 +32,7 @@ const LeftPanel = () => {
         <Router>
 
           {/* Display for Mobile-Landscape and Laptop */}
-          <Responsive displayIn={[IdResponsiveRenderOnlyIn.Laptop, IdResponsiveRenderOnlyIn.MobileLandScape]}>
+          <Responsive displayIn={[IdResponsiveRenderOnlyIn.Laptop, IdResponsiveRenderOnlyIn.MobileLandScape, IdResponsiveRenderOnlyIn.Tablet]}>
             <MenuOptions url="/home" Icon={HomeIcon} text="Home" />
             <MenuOptions url="/explore" Icon={SearchIcon} text="Explore" />
             <MenuOptions
