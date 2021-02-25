@@ -8,3 +8,17 @@
   grid-template-columns: 0.2fr 0.5fr 0.3fr;
   max-width: 1300px;
 }
+
+@media screen and (max-width: 768px){
+  .App{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: unset;
+
+    display: grid;
+    grid-template-rows: calc(100vh - 50px) 50px;
+    grid-template-columns: unset;
+    grid-template-areas: "feed" "nav";
+  }
+}

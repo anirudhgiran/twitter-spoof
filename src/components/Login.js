@@ -6,14 +6,36 @@ import "../styles/login.css";
 import firebase from "firebase/app";
 
 //Material UI Icons Import
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 //Component Imports
+import Form from "./registrationComponents/Form";
 
 const Login = ({ auth }) => {
+
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
+
+  const [err, setErr] = useState('');
 
   const signInWithGoogle = () =>{
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
+  }
+
+  const [loginClicked, setLoginClicked] = useState(false);
+
+  const loginWithEmailAndPassword = (e) =>{
+    e.preventDefault();
+
+    if(loginClicked){
+      auth.signInWithEmailAndPassword(email, pass).then((user)=>{
+        if(user) setLoginClicked(false)
+      }).catch((err)=>{
+        if(err.code === "auth/user-not-found") setErr("User not found!!!")
+        if(err.code === "auth/invalid-email" || err.code === "auth/invalid-password	") setErr('Invalid email or password!!!')
+      })
+    }else setLoginClicked(true);
   }
 
   return (
@@ -44,8 +66,24 @@ const Login = ({ auth }) => {
               fill="#EB4335"
             />
           </svg>
-          <p>Sign In With Google</p>
+          <p>SignIn with Google</p>
         </div>
+
+        {loginClicked ? 
+        <Form logIn={loginWithEmailAndPassword}
+              email={email}
+              setEmail={setEmail}
+              pass={pass}
+              setPass={setPass}
+              err={err}
+        />
+        
+        
+        
+        : <div className="signInButton" onClick={loginWithEmailAndPassword}>
+          <MailOutlineIcon/>
+          <p>Login with Email</p>
+        </div>}
       </div>
     </main>
   );

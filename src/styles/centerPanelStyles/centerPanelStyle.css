@@ -193,3 +193,9 @@
   width: 100%;
   border-radius: 15px;
 }
+
+@media screen and (max-width: 768px){
+  .centerPanel{
+    grid-area: feed;
+  }
+}

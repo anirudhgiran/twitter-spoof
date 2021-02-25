@@ -28,43 +28,43 @@
   fill: var(--tw-blue);
 }
 
-.leftPanel .navLinks{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    justify-content: flex-start;
-    margin-top: 10px;
+.leftPanel .navLinks {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
-.leftPanel .navLinks a{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 15px;
-    border-radius: 30px;
-    height: 40px;
-    text-decoration: none;
-    color: var(--tw-black);
+.leftPanel .navLinks a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  height: 40px;
+  text-decoration: none;
+  color: var(--tw-black);
 }
 
-.leftPanel .navLinks a:hover{
-    background-color: var(--tw-extra-light-gray);
-    color: var(--tw-blue);
+.leftPanel .navLinks a:hover {
+  background-color: var(--tw-extra-light-gray);
+  color: var(--tw-blue);
 }
 
-.leftPanel .navLinks a .MuiSvgIcon-root{
-    margin-left: 10px;
-    margin-right: 10px;
+.leftPanel .navLinks a .MuiSvgIcon-root {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.leftPanel .navLinks a h3{
-    margin-right: 20px;
-    font-size: 18px;
+.leftPanel .navLinks a h3 {
+  margin-right: 20px;
+  font-size: 18px;
 }
 
-.leftPanel .tweetBtn{
+.leftPanel .tweetBtn {
   position: relative;
   background: var(--tw-blue);
   height: 50px;
@@ -79,6 +79,72 @@
   cursor: pointer;
 }
 
-.leftPanel .tweetBtn:hover{
+.leftPanel .tweetBtn:hover {
   background: rgba(26, 141, 212, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .leftPanel {
+    grid-area: nav;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--tw-extra-light-gray);
+  }
+
+  .leftPanel header {
+    display: none;
+  }
+
+  .leftPanel .navLinks {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+  }
+
+  .leftPanel .navLinks a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: unset;
+    border-radius: unset;
+    margin: unset;
+    height: 40px;
+    text-decoration: none;
+    color: var(--tw-black);
+    padding: 10px;
+  }
+
+  .leftPanel .navLinks a:hover {
+    background-color: unset;
+    color: unset;
+    margin: unset;
+  }
+
+  .leftPanel .navLinks a .MuiSvgIcon-root {
+    margin-left: unset;
+    margin-right: unset;
+    margin: unset;
+  }
+
+  .leftPanel .navLinks a h3 {
+    display: none;
+    margin-right: 20px;
+    font-size: 18px;
+    margin: unset;
+  }
+
+  .leftPanel .tweetBtn {
+    display: none;
+  }
 }

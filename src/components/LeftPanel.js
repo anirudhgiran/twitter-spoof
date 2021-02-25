@@ -20,6 +20,9 @@ import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
+//Responsive-React Imports
+import { Responsive, IdResponsiveRenderOnlyIn } from "responsive-react";
+
 const LeftPanel = () => {
   return (
     <div className="leftPanel">
@@ -27,26 +30,42 @@ const LeftPanel = () => {
 
       <div className="navLinks">
         <Router>
-          <MenuOptions url="/home" Icon={HomeIcon} text="Home" />
-          <MenuOptions url="/explore" Icon={SearchIcon} text="Explore" />
-          <MenuOptions
-            url="/notifications"
-            Icon={NotificationIcon}
-            text="Notifications"
-          />
-          <MenuOptions url="/messages" Icon={MailOutlineIcon} text="Messages" />
-          <MenuOptions
-            url="/bookmarks"
-            Icon={BookmarkBorderIcon}
-            text="Bookmarks"
-          />
-          <MenuOptions
-            url="/lists"
-            Icon={FormatListBulletedIcon}
-            text="Lists"
-          />
-          <MenuOptions url="/profile" Icon={PersonOutlineIcon} text="Profile" />
-          <MenuOptions url="/more" Icon={MoreHorizIcon} text="More" />
+
+          {/* Display for Mobile-Landscape and Laptop */}
+          <Responsive displayIn={[IdResponsiveRenderOnlyIn.Laptop, IdResponsiveRenderOnlyIn.MobileLandScape]}>
+            <MenuOptions url="/home" Icon={HomeIcon} text="Home" />
+            <MenuOptions url="/explore" Icon={SearchIcon} text="Explore" />
+            <MenuOptions
+              url="/notifications"
+              Icon={NotificationIcon}
+              text="Notifications"
+            />
+            <MenuOptions url="/messages" Icon={MailOutlineIcon} text="Messages" />
+            <MenuOptions
+              url="/bookmarks"
+              Icon={BookmarkBorderIcon}
+              text="Bookmarks"
+            />
+            <MenuOptions
+              url="/lists"
+              Icon={FormatListBulletedIcon}
+              text="Lists"
+            />
+            <MenuOptions url="/profile" Icon={PersonOutlineIcon} text="Profile" />
+            <MenuOptions url="/more" Icon={MoreHorizIcon} text="More" />
+          </Responsive>
+
+          {/* Display for Mobile-Portrait */}
+          <Responsive displayIn={IdResponsiveRenderOnlyIn.Mobile}>
+          <MenuOptions url="/home" Icon={HomeIcon}  />
+            <MenuOptions url="/explore" Icon={SearchIcon} />
+            <MenuOptions
+              url="/notifications"
+              Icon={NotificationIcon}
+            />
+            <MenuOptions url="/messages" Icon={MailOutlineIcon} />
+            <MenuOptions url="/profile" Icon={PersonOutlineIcon} />
+          </Responsive>
         </Router>
       </div>
 

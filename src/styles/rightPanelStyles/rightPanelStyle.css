@@ -26,3 +26,9 @@
     background: var(--tw-dark-gray);
     color: var(--tw-extra-light-gray);
 }
+
+@media screen and (max-width: 768px){
+  .rightPanel{
+    display: none;
+  }
+}
